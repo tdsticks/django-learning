@@ -1,5 +1,3 @@
-# Django settings for project project.
-
 SITE_ROOT = "/Library/Webserver/Documents/Django/project/"
 
 DEBUG = True
