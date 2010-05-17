@@ -1,7 +1,9 @@
+from django.core import serializers
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import Context, loader
+from django.utils import simplejson
 
 from project.polls.models import Poll, Choice
 
@@ -41,3 +43,13 @@ def vote(request, poll_id):
         selected_choice.votes += 1
         selected_choice.save()
         return HttpResponseRedirect(reverse('project.polls.views.results', args = (p.id,)))
+
+def json_dump(request):
+    poll_list = Poll.objects.all().order_by("-pub_date")
+    json_s = serializers.serialize("json", poll_list, ensure_ascii=False)
+    return HttpResponse(json_s, mimetype='application/json')
+
+def xml_dump(request):
+    poll_list = Poll.objects.all().order_by("-pub_date")
+    xml_s = serializers.serialize("xml", poll_list)
+    return HttpResponse(xml_s, mimetype='text/xml')

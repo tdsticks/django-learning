@@ -2,8 +2,8 @@ import datetime
 from django.db import models
 
 class Poll(models.Model):
-    question = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date_published')
+    question = models.CharField(max_length=200, default='What\'s up?')
+    pub_date = models.DateTimeField('date published')
     poops = models.CharField(max_length=255)
 
     def was_published_today(self):

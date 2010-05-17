@@ -8,6 +8,8 @@
         <li><a href="{% url project.polls.views.detail poll.id %}">{{ poll.question }}</a></li>
     {% endfor %}
     </ul>
+    <a href="{% url project.polls.views.json_dump %}">json</a> |
+    <a href="{% url project.polls.views.xml_dump %}">xml</a>
 {% else %}
     <p>No polls available.</p>
 {% endif %}
