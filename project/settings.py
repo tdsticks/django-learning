@@ -1,27 +1,28 @@
-SITE_ROOT = "/Library/Webserver/Documents/Django/project/"
+SITE_ROOT = "/Users/steves/Documents/workspace/Python/dev/django-learning/project/"
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Ben Borowski', 'ben.borowski@typeoneerror.com'),
+    ('Steve Stickel', 'tdsticks@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'mysql'                                    # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'djangotest'                                 # Or path to database file if using sqlite3.
-DATABASE_USER = 'root'                                       # Not used with sqlite3.
-DATABASE_PASSWORD = 'root'                                   # Not used with sqlite3.
-DATABASE_HOST = '/Applications/MAMP/tmp/mysql/mysql.sock'    # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = '8889'                                       # Set to empty string for default. Not used with sqlite3.
+DATABASE_ENGINE = 'mysql'                                # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+DATABASE_NAME = 'django'                                 # Or path to database file if using sqlite3.
+DATABASE_USER = 'root'                                   # Not used with sqlite3.
+DATABASE_PASSWORD = 'root'                               # Not used with sqlite3.
+DATABASE_HOST = 'localhost'                              # Set to empty string for localhost. Not used with sqlite3.
+DATABASE_PORT = ''                                       # Set to empty string for default. Not used with sqlite3.
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Los_Angeles'
+TIME_ZONE = 'America/Detroit'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -48,12 +49,12 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 't467mqou$yv-q(r^g1-%1cee2yg0z3sry4ax52rf_(uix^ybx3'
+SECRET_KEY = 'm5Dvi7EuT1@n4Jf#L8u^n59F7p-h=P!h,eA2)9]r4B+g4Y?w3Q'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.load_template_source',
 )
 

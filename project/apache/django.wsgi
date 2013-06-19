@@ -1,6 +1,6 @@
 import os, sys
 
-path = '/Library/Webserver/Documents/Django'
+path = '/Users/steves/Documents/workspace/Python/dev/django-learning'
 if path not in sys.path:
     sys.path.append(path)
 
